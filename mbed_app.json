@@ -2,6 +2,7 @@
     "macros": [
     ],
     "config": {
+        "status-led": "LED1"
     },
     "target_overrides": {
         "*": {
@@ -9,6 +10,7 @@
              "platform.stdio-baud-rate": 115200
         },
         "DISCO_L475VG_IOT01A": {
+            "status-led": "LED3",
             "target.features_add"               : ["STORAGE"],
             "target.components_add"             : ["SD"],
             "sd.SPI_MOSI"                       : "D11",

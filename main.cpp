@@ -6,7 +6,7 @@
 #define LED_OFF 1
 
 // Progress indicator
-DigitalOut led(LED3);
+DigitalOut led(MBED_CONF_APP_STATUS_LED);
 
 void handler(void) {
     led = !led;

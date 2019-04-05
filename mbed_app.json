@@ -2,21 +2,20 @@
     "macros": [
     ],
     "config": {
-        "status-led": "LED1"
+        "status-led": "LED1",
+        "led-on": 1
     },
     "target_overrides": {
         "*": {
              "platform.stdio-convert-newlines": true,
-             "platform.stdio-baud-rate": 115200
+             "platform.stdio-baud-rate": 115200,
+             "target.features_add": ["STORAGE"],
+             "target.components_add": ["SD"]
+ 
         },
-        "DISCO_L475VG_IOT01A": {
+        "K64F": {
             "status-led": "LED3",
-            "target.features_add"               : ["STORAGE"],
-            "target.components_add"             : ["SD"],
-            "sd.SPI_MOSI"                       : "D11",
-            "sd.SPI_MISO"                       : "D12",
-            "sd.SPI_CLK"                        : "D13",
-            "sd.SPI_CS"                         : "D10" 
+            "led-on": 0
         }
     }
 }
